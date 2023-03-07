@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/reminderListFragment">
+
+    <fragment
+        android:id="@+id/reminderListFragment"
+        android:name="com.example.location_reminder.location_reminders.reminders_list.ReminderListFragment"
+        android:label="Reminder List">
+        <action
+            android:id="@+id/action_reminderListFragment_to_saveReminderFragment"
+            app:destination="@id/saveReminderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveReminderFragment"
+        android:name="com.example.location_reminder.location_reminders.save_reminder.SaveReminderFragment"
+        android:label="New Reminder">
+        <action
+            android:id="@+id/action_saveReminderFragment_to_selectLocationFragment"
+            app:destination="@id/selectLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectLocationFragment"
+        android:name="com.example.location_reminder.location_reminders.save_reminder.SelectLocationFragment"
+        android:label="Select Location" >
+        <action
+            android:id="@+id/action_selectLocationFragment_to_saveReminderFragment"
+            app:destination="@id/saveReminderFragment" />
+    </fragment>
+</navigation>
